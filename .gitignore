@@ -1,0 +1,10 @@
+
+node_modules/
+
+.env
+
+logs/*.yaml
+logs-history/*.yaml
+
+reports-from-yaml/*.yaml
+

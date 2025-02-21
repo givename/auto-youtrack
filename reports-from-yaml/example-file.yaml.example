@@ -1,0 +1,30 @@
+12.02:
+  Times:
+    15m:
+      type: meet
+      name: daily
+  Tasks:
+    4242:
+      title: work on ...
+      desc: >-
+        yes i am work
+
+11.02:
+  Times:
+    15m:
+      type: meet
+      name: daily
+    1h:
+      type: meet
+      name: tech-lead
+    30m:
+      type: task
+      task: 23155
+  Tasks:
+    23155:
+      title: hotfix bug
+
+    4242:
+      title: work on ...
+      desc: >-
+        yes i am work
