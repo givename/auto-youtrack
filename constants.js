@@ -7,6 +7,6 @@ export const FOLDER_FROM_YAML = "reports-from-yaml";
 export const FOLDER_LOGS = "logs";
 export const FOLDER_LOGS_HISTORY = "logs-history";
 
-export const TASK_FOR_MEET = process.env.YOUTRACK_TASK_FOR_MEET;
+export const TASK_FOR_MEET = Number(process.env.YOUTRACK_TASK_FOR_MEET);
 export const FULL_WORK_DAY_MS = ms(process.env.YOUTRACK_FULL_WORK_DAY);
 export const CURRENT_YEAR = new Date().getFullYear();

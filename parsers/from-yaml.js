@@ -56,7 +56,8 @@ export const parse = (text) => {
     }
 
     for (const [timeString, variant] of Object.entries(dayReport["Times"])) {
-      const timeMs = ms(timeString);
+      const timeWithoutUniq = timeString.split("-").at(0);
+      const timeMs = ms(timeWithoutUniq);
       const timeMin = timeMsToTimeMin(timeMs);
       const type = variant["type"];
 
@@ -74,6 +75,10 @@ export const parse = (text) => {
         meetTimes.push(meetTime);
       } else if (type === "task") {
         const taskNumber = Number(variant["task"]);
+
+        if (taskPreparatoryTimes[taskNumber] === undefined) {
+          taskCount += 1;
+        }
 
         taskWithTimeCount += 1;
         lostTimeMs -= timeMs;
