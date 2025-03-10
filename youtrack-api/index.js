@@ -155,5 +155,11 @@ export const deleteWorkItem = async (taskNumber, workItemId) => {
   });
 
   const json = await response.json();
+  const isEmptyJson = Boolean(json);
+
+  if (isEmptyJson) {
+    return;
+  }
+
   throwIfError(json);
 };
